@@ -69,7 +69,7 @@ class PointUDT(UserDefinedType):
         """
         The class name of the paired Scala UDT.
         """
-        return "magellan.PointUDT"
+        return "org.apache.spark.sql.types.PointUDT"
 
     def serialize(self, obj):
         """
@@ -140,7 +140,7 @@ class Point(Shape):
     def jsonValue(self):
         return {"type": "udt",
                 "pyClass": "magellan.types.PointUDT",
-                "class": "magellan.PointUDT",
+                "class": "org.apache.spark.sql.types.PointUDT",
                 "sqlType": "magellan.Point"}
 
     def convert(self):
